@@ -18,6 +18,10 @@
 (tool-bar-mode -1) 
 (load-theme 'gruvbox-dark-hard t)
 
+;; backups
+(setq make-backup-files nil) ; stop creating backup~ files
+(setq auto-save-default nil) ; stop creating #autosave# files
+
 ;; Enable Evil
 (require 'evil)
 (evil-mode 1)
