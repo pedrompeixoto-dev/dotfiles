@@ -1,23 +1,35 @@
 ;; Set up package.el to work with MELPA
+
 (require 'package)
 (add-to-list 'package-archives
              '("melpa" . "https://melpa.org/packages/"))
 (package-initialize)
 (package-refresh-contents)
 
-;; Download Evil
+;; Packages
 (unless (package-installed-p 'evil)
   (package-install 'evil))
+(unless (package-installed-p 'gruvbox-theme)
+  (package-install 'gruvbox-theme))
+
+;; ui
+(menu-bar-mode -1)
+(scroll-bar-mode -1)
+(tool-bar-mode -1) 
+(load-theme 'gruvbox-dark-hard t)
 
 ;; Enable Evil
 (require 'evil)
 (evil-mode 1)
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages '(evil)))
+ '(custom-safe-themes
+   '("6b5c518d1c250a8ce17463b7e435e9e20faa84f3f7defba8b579d4f5925f60c1" default))
+ '(package-selected-packages '(gruvbox-theme evil)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
