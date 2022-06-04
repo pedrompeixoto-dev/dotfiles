@@ -18,6 +18,7 @@
 (scroll-bar-mode -1)
 (tool-bar-mode -1) 
 (load-theme 'gruvbox-dark-hard t)
+(set-frame-font "Liberation Mono 11" nil t)
 
 ;; backups
 (setq make-backup-files nil) ; stop creating backup~ files
