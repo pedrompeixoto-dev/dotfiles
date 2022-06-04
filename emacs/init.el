@@ -46,6 +46,10 @@
 (evil-define-key 'normal 'global (kbd "<leader>s") 'split-window-vertically)
 (evil-define-key 'normal 'global (kbd "<leader>t") 'eshell)
 
+(evil-define-key 'normal 'org-mode-map (kbd "<leader>ot") 'org-todo)
+(evil-define-key 'normal 'org-mode-map (kbd "<leader>ol") 'org-insert-link)
+(evil-define-key 'normal 'org-mode-map (kbd "<leader>oo") 'org-open-at-point)
+
 (custom-set-variables
  ;; If you edit it by hand, you could mess
  ;; , so be careful.
