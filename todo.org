@@ -23,7 +23,7 @@ dotfiles
 *** DONE Set font
 ** Project workflow
 *** TODO Search files
-*** TODO Search occurrences
+*** TODO Grep across project
 *** TODO Rename across project
 *** TODO Find references
 *** TODO Find definitions
