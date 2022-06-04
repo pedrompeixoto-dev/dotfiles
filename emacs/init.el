@@ -33,11 +33,15 @@
 (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
 
 ;; KEYBINDS
-(evil-set- 'normal (kbd "<SPC>"))
+(evil-set-leader 'normal (kbd "<SPC>"))
 (evil-define-key 'normal 'global (kbd "<leader>h") 'evil-window-left)
 (evil-define-key 'normal 'global (kbd "<leader>j") 'evil-window-down)
 (evil-define-key 'normal 'global (kbd "<leader>k") 'evil-window-up)
 (evil-define-key 'normal 'global (kbd "<leader>l") 'evil-window-right)
+(evil-define-key 'normal 'global (kbd "<leader>H") 'evil-window-move-far-left)
+(evil-define-key 'normal 'global (kbd "<leader>J") 'evil-window-move-very-bottom)
+(evil-define-key 'normal 'global (kbd "<leader>K") 'evil-window-move-very-top)
+(evil-define-key 'normal 'global (kbd "<leader>L") 'evil-window-move-far-right)
 
 (custom-set-variables
  ;; If you edit it by hand, you could mess
