@@ -14,11 +14,12 @@
   (package-install 'org-bullets))
 
 ;; ui
-(menu-bar-mode -1)
-(scroll-bar-mode -1)
-(tool-bar-mode -1) 
+(menu-bar-mode 0)
+(scroll-bar-mode 0)
+(tool-bar-mode 0) 
 (load-theme 'gruvbox-dark-hard t)
-(set-frame-font "Liberation Mono 11" nil t)
+(add-to-list 'default-frame-alist '(font . "Liberation Mono-11" ))
+(set-face-attribute 'default t :font "Liberation Mono-11" )
 
 ;; backups
 (setq make-backup-files nil) ; stop creating backup~ files
