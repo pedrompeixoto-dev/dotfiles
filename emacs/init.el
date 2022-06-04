@@ -42,6 +42,9 @@
 (evil-define-key 'normal 'global (kbd "<leader>J") 'evil-window-move-very-bottom)
 (evil-define-key 'normal 'global (kbd "<leader>K") 'evil-window-move-very-top)
 (evil-define-key 'normal 'global (kbd "<leader>L") 'evil-window-move-far-right)
+(evil-define-key 'normal 'global (kbd "<leader>v") 'split-window-horizontally)
+(evil-define-key 'normal 'global (kbd "<leader>s") 'split-window-vertically)
+(evil-define-key 'normal 'global (kbd "<leader>t") 'eshell)
 
 (custom-set-variables
  ;; If you edit it by hand, you could mess
