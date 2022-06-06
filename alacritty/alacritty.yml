@@ -1,0 +1,17 @@
+font:
+  normal:
+    family: Liberation Mono
+    style: Regular
+
+  # The bold font face
+  bold:
+    family: Liberation Mono
+    style: Bold
+
+  # The italic font face
+  italic:
+    family: Liberation Mono
+    style: Italic
+
+  # Point size of the font
+  size: 11.0
