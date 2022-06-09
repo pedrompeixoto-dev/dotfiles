@@ -40,6 +40,12 @@
 (require 'org-bullets)
 (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
 
+;;;; colorize output in compile buffer
+(require 'ansi-color)
+(defun colorize-compilation-buffer ()
+  (ansi-color-apply-on-region compilation-filter-start (point-max)))
+(add-hook 'compilation-filter-hook 'colorize-compilation-buffer)
+
 ;; KEYBINDS
 (evil-set-leader 'normal (kbd "<SPC>"))
 (evil-define-key 'normal 'global (kbd "<leader>h") 'evil-window-left)
