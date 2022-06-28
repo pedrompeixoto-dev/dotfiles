@@ -12,6 +12,10 @@
   (package-install 'gruvbox-theme))
 (unless (package-installed-p 'org-bullets)
   (package-install 'org-bullets))
+(unless (package-installed-p 'typescript-mode)
+  (package-install 'typescript-mode))
+(unless (package-installed-p 'editorconfig)
+  (package-install 'editorconfig))
 
 ;; ui
 (menu-bar-mode 0)
@@ -64,6 +68,12 @@
 (evil-define-key 'normal 'org-mode-map (kbd "<leader>ol") 'org-insert-link)
 (evil-define-key 'normal 'org-mode-map (kbd "<leader>oo") 'org-open-at-point)
 
+(require 'typescript-mode)
+
+(add-to-list 'load-path "~/.emacs.d/lisp")
+(require 'editorconfig)
+(editorconfig-mode 1)
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -71,7 +81,8 @@
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
    '("6b5c518d1c250a8ce17463b7e435e9e20faa84f3f7defba8b579d4f5925f60c1" default))
- '(package-selected-packages '(org-bullets gruvbox-theme evil)))
+ '(package-selected-packages
+   '(editorconfig typescript-mode org-bullets gruvbox-theme evil)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
