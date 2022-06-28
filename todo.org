@@ -4,7 +4,14 @@ dotfiles
 ** [[Emacs]]
    
 * Global
-** TODO Windows setup
+** DONE Windows setup
+
+* Windows
+** TODO Powershell profile
+** TODO Windows terminal config
+
+* Git
+** TODO git config
    
 * Emacs
 ** EVIL
@@ -12,6 +19,7 @@ dotfiles
 *** DONE Window navigation keybinds
 *** DONE Split window keybinds
 *** DONE Open terminal keymap
+*** TODO map jj or jk to activate normal mode
 ** Org Mode
 *** DONE Change state keybind
 *** DONE Go to link keybind
@@ -27,4 +35,3 @@ dotfiles
 *** TODO Rename across project
 *** TODO Find references
 *** TODO Find definitions
-   
