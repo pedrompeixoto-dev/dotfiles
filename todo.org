@@ -19,6 +19,9 @@ dotfiles
 *** DONE Window navigation keybinds
 *** DONE Split window keybinds
 *** DONE Open terminal keymap
+*** DONE Open terminal keymap
+*** DONE Resize frame keymaps
+*** DONE project-find-file keymap
 *** TODO map jj or jk to activate normal mode
 ** Org Mode
 *** DONE Change state keybind

@@ -68,6 +68,13 @@
 (evil-define-key 'normal 'org-mode-map (kbd "<leader>ol") 'org-insert-link)
 (evil-define-key 'normal 'org-mode-map (kbd "<leader>oo") 'org-open-at-point)
 
+(evil-define-key 'normal 'org-mode-map (kbd "<leader>f") 'project-find-file)
+
+(evil-define-key 'normal 'global (kbd "M-d") 'shrink-window-horizontally)
+(evil-define-key 'normal 'global (kbd "M-I") 'enlarge-window)
+(evil-define-key 'normal 'global (kbd "M-i") 'enlarge-window-horizontally)
+(evil-define-key 'normal 'global (kbd "M-D") 'shrink-window)
+
 (require 'typescript-mode)
 
 (add-to-list 'load-path "~/.emacs.d/lisp")
