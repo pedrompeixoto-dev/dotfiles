@@ -1,0 +1,25 @@
+if !has('vim9script')
+    " TODO 
+    finish
+endif
+
+vim9script
+
+syntax on
+
+filetype plugin indent on
+set tabstop=4
+set shiftwidth=4
+set expandtab
+
+if has('gui_running')
+    set guioptions-=mTr
+    colorscheme industry
+    if has('gui_win32')
+        set guifont=Liberation_Mono:h11:cANSI
+    else
+        # TODO
+    endif
+endif
+
+
