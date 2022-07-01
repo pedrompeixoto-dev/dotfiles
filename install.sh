@@ -1,3 +1,3 @@
-ln -sTf ~/.dotfiles/emacs ~/.emacs.d
-ln -sTf ~/.dotfiles/alacritty ~/.config/alacritty
-ln -sTf ~/.dotfiles/xinitrc ~/.xinitrc
+HOME=/home/pedro/
+ln -sTf $PWD/emacs $HOME/.emacs.d
+ln -sTf $PWD/vim $HOME/.vim
