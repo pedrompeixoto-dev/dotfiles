@@ -1,5 +1,4 @@
 if !has('vim9script')
-    " TODO 
     finish
 endif
 
@@ -12,16 +11,24 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
+colorscheme industry
 if has('gui_running')
     set guioptions-=T
     set guioptions-=m
     set guioptions-=r
-    colorscheme industry
     if has('gui_win32')
         set guifont=Liberation_Mono:h11:cANSI
     else
-        # TODO
     endif
 endif
 
+nnoremap <SPACE> <Nop>
+g:mapleader = " "
 
+nnoremap <silent> <leader>h :wincmd h<CR>
+nnoremap <silent> <leader>j :wincmd j<CR>
+nnoremap <silent> <leader>k :wincmd k<CR>
+nnoremap <silent> <leader>l :wincmd l<CR>
+
+nnoremap <silent> <leader>s :split<CR>
+nnoremap <silent> <leader>v :vsplit<CR>
