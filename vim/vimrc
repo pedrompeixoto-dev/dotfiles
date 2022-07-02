@@ -11,11 +11,13 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
-colorscheme industry
+colorscheme custom_colourscheme
+
 if has('gui_running')
     set guioptions-=T
     set guioptions-=m
     set guioptions-=r
+    set guioptions-=L
     if has('gui_win32')
         set guifont=Liberation_Mono:h11:cANSI
     else
