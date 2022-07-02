@@ -1,5 +1,4 @@
 if !has('vim9script')
-    " TODO 
     finish
 endif
 
@@ -20,9 +19,11 @@ if has('gui_running')
     if has('gui_win32')
         set guifont=Liberation_Mono:h11:cANSI
     else
-        # TODO
     endif
 endif
+
+nnoremap <SPACE> <Nop>
+g:mapleader = " "
 
 nnoremap <silent> <leader>h :wincmd h<CR>
 nnoremap <silent> <leader>j :wincmd j<CR>
