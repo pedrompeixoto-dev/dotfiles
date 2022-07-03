@@ -26,6 +26,28 @@ if has('gui_running')
 endif
 
 set relativenumber
+set fillchars+=vert:\ 
+
+var currentmode = {
+    'n': 'NORMAL ',
+    'v': 'VISUAL ',
+    'V': 'V·Line ',
+    "\<C-V>": 'V·Block ',
+    'i': 'INSERT ',
+    'R': 'R ',
+    'Rv': 'V·Replace ',
+    'c': 'Command ',
+}
+ 
+g:gitBranch = substitute(system("git rev-parse --abbrev-ref HEAD"), '\n', '', 'g')
+
+set laststatus=2
+set statusline=
+set statusline+=\ %{currentmode[mode()]}
+set statusline+=%F%m\ [%Y\ %{&fileencoding}\ %{&fileformat}]\ 
+set statusline+=branch:%{gitBranch}\ 
+set statusline+=%=
+set statusline+=L:%l/%L\ C:%c\ 
 
 nnoremap <SPACE> <Nop>
 g:mapleader = " "
