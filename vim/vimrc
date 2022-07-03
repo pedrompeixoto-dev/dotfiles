@@ -39,10 +39,13 @@ var currentmode = {
     'c': 'Command ',
 }
  
+g:gitBranch = substitute(system("git rev-parse --abbrev-ref HEAD"), '\n', '', 'g')
+
 set laststatus=2
 set statusline=
 set statusline+=\ %{currentmode[mode()]}
-set statusline+=%F%m\ [%Y\ %{&fileencoding}\ %{&fileformat}]
+set statusline+=%F%m\ [%Y\ %{&fileencoding}\ %{&fileformat}]\ 
+set statusline+=branch:%{gitBranch}\ 
 set statusline+=%=
 set statusline+=L:%l/%L\ C:%c\ 
 
