@@ -65,7 +65,7 @@ SetMultipleHL(
 
 SetMultipleHL(
     [
-        'Comment' 
+        'Comment', 'LineNr'
     ], 
     '#767676',
     'NONE',
