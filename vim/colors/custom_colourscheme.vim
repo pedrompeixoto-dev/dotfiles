@@ -7,9 +7,12 @@ endif
 
 set background=dark
 
-def SetMultipleHL(groups: list<string>, guifg: string, guibg: string, ctermfg: string, ctermbg: string, gui: string = 'NONE')
+def SetMultipleHL(groups: list<string>, guifg: string, guibg: string, 
+    ctermfg: string, ctermbg: string, 
+    gui: string = 'NONE', cterm='NONE')
     for group in groups
-        execute 'hi ' .. group .. ' guifg=' .. guifg .. ' guibg=' .. guibg .. ' gui=' .. gui .. ' ctermfg=' .. ctermfg .. ' ctermbg=' .. ctermbg
+        execute 'hi ' .. group .. ' guifg=' .. guifg .. ' guibg=' .. guibg .. ' gui=' .. gui .. 
+            ' ctermfg=' .. ctermfg .. ' ctermbg=' .. ctermbg
     endfor
 enddef
 
@@ -18,18 +21,18 @@ SetMultipleHL(
         'lCursor', 'MatchParen', 'PMenuSel', 'MatchParen', 'PMenuSel'
     ], 
     '#000000',
-    '#ffffff',
+    '#dadada',
     '0', 
-    '15' 
+    '252' 
 )
 
 SetMultipleHL(
     [
         'Normal', 'Special', 'Identifier', 'Constant', 'NonText'
     ], 
-    '#ffffff',
+    '#dadada',
     '#121212',
-    '15',
+    '253',
     '233'
 )
 
@@ -58,9 +61,9 @@ SetMultipleHL(
         'MatchParen' 
     ], 
     '#000000',
-    '#ffffff',
+    '#dadada',
     '0',
-    '15'
+    '253'
 )
 
 SetMultipleHL(
@@ -84,9 +87,7 @@ SetMultipleHL(
 )
 
 SetMultipleHL(
-    [
-        'Error', 
-    ], 
+    ['Error'], 
     '#ff0000',
     'NONE',
     '9',
@@ -95,9 +96,7 @@ SetMultipleHL(
 )
 
 SetMultipleHL(
-    [
-        'WarningMsg' 
-    ], 
+    ['WarningMsg'], 
     '#d7d700',
     'NONE',
     '184',
@@ -106,29 +105,23 @@ SetMultipleHL(
 )
 
 SetMultipleHL(
-    [
-        'Pmenu' 
-    ], 
-    '#ffffff',
+    ['Pmenu'], 
+    '#dadada',
     '#000000',
-    '15',
+    '253',
     '0'
 )
 
 SetMultipleHL(
-    [
-        'PMenuSel'
-    ], 
-    '#ffffff',
+    ['PMenuSel'], 
+    '#dadada',
     '#3a3a3a',
-    '15',
+    '253',
     '237'
 )
 
 SetMultipleHL(
-    [
-        'PMenuThumb'
-    ], 
+    ['PMenuThumb'], 
     'NONE',
     '#3a3a3a',
     'NONE',
@@ -136,11 +129,39 @@ SetMultipleHL(
 )
 
 SetMultipleHL(
-    [
-        'PMenuSbar'
-    ], 
+    ['PMenuSbar'], 
     'NONE',
     '#000000',
     'NONE',
     '0'
 )
+
+SetMultipleHL(
+    ['StatusLine'],
+    '#eeeeee',
+    '#000000',
+    '243',
+    '0',
+    'bold',
+    'bold',
+)
+
+SetMultipleHL(
+    ['StatusLineNC'],
+    '#767676',
+    '#000000',
+    '243',
+    '0',
+)
+
+SetMultipleHL(
+    ['StatusLine', 'VertSplit'],
+    '#eeeeee',
+    '#000000',
+    '255',
+    '0',
+    'bold',
+    'bold',
+)
+
+
