@@ -28,7 +28,7 @@ endif
 set relativenumber
 set fillchars+=vert:\ 
 
-var currentmode = {
+g:currentmode = {
     'n': 'NORMAL ',
     'v': 'VISUAL ',
     'V': 'V·Line ',
@@ -39,13 +39,53 @@ var currentmode = {
     'c': 'Command ',
 }
  
-g:gitBranch = substitute(system("git rev-parse --abbrev-ref HEAD"), '\n', '', 'g')
+
+# TODO refactor this function
+def g:FileInfo(): string
+    var type = &filetype
+    var encoding = &fileencoding
+    var format = &fileformat
+    var result = ''
+
+    if (type != '')
+        result = result .. type
+    endif
+
+    if (format != '')
+        if (result != '')
+            result = result .. ' '
+        endif 
+        result = result .. format
+    endif
+
+    if (encoding != '')
+        if (result != '')
+            result = result .. ' '
+        endif 
+        result = result .. format
+    endif
+
+    return result 
+enddef
+
+def g:GitBranch(): string
+    if !isdirectory('.git') 
+        return ''
+    endif
+    var gitBranch = substitute(system("git rev-parse --abbrev-ref HEAD"), '\n', '', 'g')
+
+    if (gitBranch != '')
+        return 'branch:' .. gitBranch
+    endif
+
+    return ''
+enddef
 
 set laststatus=2
 set statusline=
 set statusline+=\ %{currentmode[mode()]}
-set statusline+=%F%m\ [%Y\ %{&fileencoding}\ %{&fileformat}]\ 
-set statusline+=branch:%{gitBranch}\ 
+set statusline+=%F%m\ [%{FileInfo()}]\ 
+set statusline+=%{GitBranch()}\ 
 set statusline+=%=
 set statusline+=L:%l/%L\ C:%c\ 
 
