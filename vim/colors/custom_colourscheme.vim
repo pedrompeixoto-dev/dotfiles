@@ -12,7 +12,7 @@ def SetMultipleHL(groups: list<string>, guifg: string, guibg: string,
     gui: string = 'NONE', cterm='NONE')
     for group in groups
         execute 'hi ' .. group .. ' guifg=' .. guifg .. ' guibg=' .. guibg .. ' gui=' .. gui .. 
-            ' ctermfg=' .. ctermfg .. ' ctermbg=' .. ctermbg
+            ' ctermfg=' .. ctermfg .. ' ctermbg=' .. ctermbg .. ' cterm=' .. cterm
     endfor
 enddef
 
