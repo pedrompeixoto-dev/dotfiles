@@ -31,6 +31,7 @@ endif
 
 set relativenumber
 set fillchars+=vert:\ 
+set belloff=all
 
 g:currentmode = {
     'n': 'NORMAL ',
@@ -42,7 +43,6 @@ g:currentmode = {
     'Rv': 'V·Replace ',
     'c': 'Command ',
 }
- 
 
 # TODO refactor this function
 def g:FileInfo(): string
