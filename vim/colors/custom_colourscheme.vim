@@ -154,4 +154,11 @@ SetMultipleHL(
     'bold',
 )
 
+SetMultipleHL(
+    ['ColorColumn'],
+    'NONE',
+    '#1c1c1c',
+    'NONE',
+    '234',
+)
 
