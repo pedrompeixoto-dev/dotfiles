@@ -33,6 +33,8 @@ set relativenumber
 set fillchars+=vert:\ 
 set belloff=all
 set colorcolumn=80
+set encoding=utf-8
+set fileencoding=utf-8
 
 g:currentmode = {
     'n': 'NORMAL ',
