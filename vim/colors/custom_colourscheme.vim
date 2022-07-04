@@ -137,16 +137,6 @@ SetMultipleHL(
 )
 
 SetMultipleHL(
-    ['StatusLine'],
-    '#eeeeee',
-    '#000000',
-    '243',
-    '0',
-    'bold',
-    'bold',
-)
-
-SetMultipleHL(
     ['StatusLineNC'],
     '#767676',
     '#000000',
@@ -156,10 +146,10 @@ SetMultipleHL(
 
 SetMultipleHL(
     ['StatusLine', 'VertSplit'],
-    '#eeeeee',
+    '#dadada',
     '#000000',
-    '255',
     '0',
+    '253',
     'bold',
     'bold',
 )
