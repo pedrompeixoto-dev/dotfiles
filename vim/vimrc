@@ -67,7 +67,7 @@ def g:FileInfo(): string
         if (result != '')
             result = result .. ' '
         endif 
-        result = result .. format
+        result = result .. encoding
     endif
 
     return result 
