@@ -1,6 +1,8 @@
 emacs/elpa
 emacs/eshell
 emacs/auto-save-list
-emacs/.cache/
+emacs/.cache
+emacs/server
+emacs/projects
 emacs/.lsp-session-v1
 .netrwhist
