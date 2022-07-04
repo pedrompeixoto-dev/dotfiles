@@ -32,6 +32,7 @@ endif
 set relativenumber
 set fillchars+=vert:\ 
 set belloff=all
+set colorcolumn=80
 
 g:currentmode = {
     'n': 'NORMAL ',
