@@ -1,3 +1,8 @@
+(if (eq system-type 'windows-nt)
+    (setq win32 1)
+)
+
+
 ;; Set up package.el to work with MELPA
 (require 'package)
 (add-to-list 'package-archives
@@ -80,6 +85,8 @@
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (require 'editorconfig)
 (editorconfig-mode 1)
+
+(setq grep-program "findstr -s -n -i -l ")
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
