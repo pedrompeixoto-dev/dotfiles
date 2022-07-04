@@ -11,6 +11,10 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
+if has('termguicolors')
+    set termguicolors
+endif
+
 colorscheme custom_colourscheme
 
 if has('gui_running')
@@ -85,7 +89,7 @@ set laststatus=2
 set statusline=
 set statusline+=\ %{currentmode[mode()]}
 set statusline+=%F%m\ [%{FileInfo()}]\ 
-set statusline+=%{GitBranch()}\ 
+# set statusline+=%{GitBranch()}\ 
 set statusline+=%=
 set statusline+=L:%l/%L\ C:%c\ 
 
