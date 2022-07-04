@@ -15,7 +15,7 @@ if has('termguicolors')
     set termguicolors
 endif
 
-colorscheme custom_colourscheme
+colorscheme custom_colorscheme
 
 if has('gui_running')
     set guioptions-=T
