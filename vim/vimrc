@@ -71,6 +71,12 @@ nnoremap <silent> <leader>J :wincmd J<CR>
 nnoremap <silent> <leader>K :wincmd K<CR>
 nnoremap <silent> <leader>L :wincmd L<CR>
 
+nnoremap + :vert res +5<CR>
+nnoremap - :vert res -5<CR>
+nnoremap * :res +5<CR>
+nnoremap _ :res -5<CR>
+
+
 nnoremap <silent> <leader>s :split<CR>
 nnoremap <silent> <leader>v :vsplit<CR>
 
