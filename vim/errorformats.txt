@@ -5,7 +5,7 @@ to execute a line select the line and run:
 ANGULAR
 
 ng build
-set errorformat=ERROR:\ %f:%l:%c\ -\ error\ %m,%-G%.%#
+set errorformat=Error:\ %f:%l:%c\ -\ %trror\ %m,%-G%.%#
 
 ng lint --compact
 set errorformat=%f:\ line\ %l\\,\ col\ %c\\,\ %trror\ -\ %m,%-G%.%#

@@ -47,51 +47,12 @@ g:currentmode = {
     'c': 'Command ',
 }
 
-# TODO refactor this function
-def g:FileInfo(): string
-    var type = &filetype
-    var encoding = &fileencoding
-    var format = &fileformat
-    var result = ''
-
-    if (type != '')
-        result = result .. type
-    endif
-
-    if (format != '')
-        if (result != '')
-            result = result .. ' '
-        endif 
-        result = result .. format
-    endif
-
-    if (encoding != '')
-        if (result != '')
-            result = result .. ' '
-        endif 
-        result = result .. encoding
-    endif
-
-    return result 
-enddef
-
-def g:GitBranch(): string
-    if !isdirectory('.git') 
-        return ''
-    endif
-    var gitBranch = substitute(system("git rev-parse --abbrev-ref HEAD"), '\n', '', 'g')
-
-    if (gitBranch != '')
-        return 'branch:' .. gitBranch
-    endif
-
-    return ''
-enddef
+import autoload 'statusline.vim'
 
 set laststatus=2
 set statusline=
 set statusline+=\ %{currentmode[mode()]}
-set statusline+=%F%m\ [%{FileInfo()}]\ 
+set statusline+=%F%m\ [%{statusline#FileInfo()}]\ 
 # set statusline+=%{GitBranch()}\ 
 set statusline+=%=
 set statusline+=L:%l/%L\ C:%c\ 
@@ -110,3 +71,4 @@ nnoremap <silent> <leader>L :wincmd L<CR>
 
 nnoremap <silent> <leader>s :split<CR>
 nnoremap <silent> <leader>v :vsplit<CR>
+
