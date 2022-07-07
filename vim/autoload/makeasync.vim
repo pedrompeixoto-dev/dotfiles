@@ -26,7 +26,6 @@ var os = GetRunningOS()
 
 def MakeAsyncHandler(job: job, status: number) 
     execute 'vs ' .. compilationBuffer
-    execute 'wincmd p'
     execute 'cgetb ' .. bufnr(compilationBuffer)
     echom 'compilation completed and quickfix list populated' 
 enddef
@@ -48,7 +47,7 @@ export def Make(): bool
     endif
         
     echom 'running ' .. command
-    makeJob = job_start(command, { 'exit_cb': 'MakeAsyncHandler', 'out_io': 'buffer', 'out_name': compilationBuffer })
+    makeJob = job_start(command, { 'exit_cb': 'MakeAsyncHandler', 'out_io': 'buffer', 'err_io': 'buffer', 'err_name': compilationBuffer, 'out_name': compilationBuffer })
     return true
 enddef
 

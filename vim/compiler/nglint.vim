@@ -4,5 +4,5 @@ if exists("g:current_compiler")
 endif
 g:current_compiler = "nglint"
 
-CompilerSet errorformat=%-P%f,%\\s%#%l:%c%\\s%\\+%trror%\\s%\\+%m,%\\s%#%l:%c%\\s%\\+%tarning%\\s%\\+%m,%-Q,%-G%.%#
-CompilerSet makeprg=npm\ run\ lint
+set errorformat=%-P%f,%\\s%#%l:%c%\\s%\\+%trror%\\s%\\+%m,%\\s%#%l:%c%\\s%\\+%tarning%\\s%\\+%m,%-Q,%-G%.%#
+set makeprg=npm\ run\ lint

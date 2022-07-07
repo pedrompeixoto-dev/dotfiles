@@ -4,5 +4,6 @@ if exists("g:current_compiler")
 endif
 g:current_compiler = "ngbuild"
 
-CompilerSet errorformat=Error:\ %f:%l:%c\ -\ %trror\ %m,%-G%.%#
-CompilerSet makeprg=npm\ run\ build
+set makeprg=npm\ run\ build
+set errorformat=Error:\ %f:%l:%c\ -\ error\ %m,
+			\%-G%.%#

@@ -17,7 +17,7 @@ export def GitBranch(): string
     return ''
 enddef
 
-export def FileInfo(): string
+export def g:FileInfo(): string
     var type = &filetype
     var encoding = &fileencoding
     var format = &fileformat
