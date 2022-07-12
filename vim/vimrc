@@ -30,7 +30,7 @@ if has('gui_running')
 endif
 
 set relativenumber
-set fillchars+=vert:\ 
+set fillchars+=vert:\
 set belloff=all
 set colorcolumn=80
 set encoding=utf-8
@@ -41,9 +41,9 @@ set mouse=a
 set laststatus=2
 set statusline=
 set statusline+=\ %{statusline_utils#mode[mode()]}
-set statusline+=%F%m\ [%{statusline_utils#FileInfo()}]\ 
+set statusline+=%F%m\ [%{statusline_utils#FileInfo()}]\
 set statusline+=%=
-set statusline+=L:%l/%L\ C:%c\ 
+set statusline+=L:%l/%L\ C:%c\
 
 nnoremap <SPACE> <Nop>
 g:mapleader = " "

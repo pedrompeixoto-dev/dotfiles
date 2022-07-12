@@ -7,29 +7,29 @@ endif
 
 set background=dark
 
-def SetMultipleHL(groups: list<string>, guifg: string, guibg: string, 
-    ctermfg: string, ctermbg: string, 
+def SetMultipleHL(groups: list<string>, guifg: string, guibg: string,
+    ctermfg: string, ctermbg: string,
     gui: string = 'NONE', cterm='NONE')
     for group in groups
-        execute 'hi ' .. group .. ' guifg=' .. guifg .. ' guibg=' .. guibg .. ' gui=' .. gui .. 
+        execute 'hi ' .. group .. ' guifg=' .. guifg .. ' guibg=' .. guibg .. ' gui=' .. gui ..
             ' ctermfg=' .. ctermfg .. ' ctermbg=' .. ctermbg .. ' cterm=' .. cterm
     endfor
 enddef
 
 SetMultipleHL(
     [
-        'Cursor', 'iCursor', 
-    ], 
+        'Cursor', 'iCursor',
+    ],
     '#000000',
     '#ffffff',
-    '0', 
-    '15' 
+    '0',
+    '15'
 )
 
 SetMultipleHL(
     [
         'Normal', 'Special', 'Identifier', 'Constant', 'NonText'
-    ], 
+    ],
     '#dadada',
     '#121212',
     '253',
@@ -39,7 +39,7 @@ SetMultipleHL(
 SetMultipleHL(
     [
         'Title',
-    ], 
+    ],
     '#dadada',
     '#121212',
     '253',
@@ -48,8 +48,8 @@ SetMultipleHL(
 
 SetMultipleHL(
     [
-        'Statement', 'Type', 'PreProc', 'Directory' 
-    ], 
+        'Statement', 'Type', 'PreProc', 'Directory'
+    ],
     '#d7af00',
     'NONE',
     '178',
@@ -58,8 +58,8 @@ SetMultipleHL(
 
 SetMultipleHL(
     [
-        'String' 
-    ], 
+        'String'
+    ],
     '#87af87',
     'NONE',
     '108',
@@ -68,8 +68,8 @@ SetMultipleHL(
 
 SetMultipleHL(
     [
-        'MatchParen' 
-    ], 
+        'MatchParen'
+    ],
     '#dadada',
     '#000000',
     '253',
@@ -79,7 +79,7 @@ SetMultipleHL(
 SetMultipleHL(
     [
         'Comment', 'LineNr'
-    ], 
+    ],
     '#767676',
     'NONE',
     '243',
@@ -89,7 +89,7 @@ SetMultipleHL(
 SetMultipleHL(
     [
         'Todo', 'ErrorMsg'
-    ], 
+    ],
     '#ff0000',
     'NONE',
     '9',
@@ -97,7 +97,7 @@ SetMultipleHL(
 )
 
 SetMultipleHL(
-    ['Error'], 
+    ['Error'],
     '#ff0000',
     'NONE',
     '9',
@@ -106,7 +106,7 @@ SetMultipleHL(
 )
 
 SetMultipleHL(
-    ['WarningMsg'], 
+    ['WarningMsg'],
     '#d7d700',
     'NONE',
     '184',
@@ -115,7 +115,7 @@ SetMultipleHL(
 )
 
 SetMultipleHL(
-    ['Pmenu'], 
+    ['Pmenu'],
     '#dadada',
     '#000000',
     '253',
@@ -123,7 +123,7 @@ SetMultipleHL(
 )
 
 SetMultipleHL(
-    ['PMenuSel', 'WildMenu', 'Search', 'Visual', 'QuickFixLine'], 
+    ['PMenuSel', 'WildMenu', 'Search', 'Visual', 'QuickFixLine'],
     '#000000',
     '#a8a8a8',
     '0',
@@ -131,7 +131,7 @@ SetMultipleHL(
 )
 
 SetMultipleHL(
-    ['PMenuThumb'], 
+    ['PMenuThumb'],
     'NONE',
     '#3a3a3a',
     'NONE',
@@ -139,7 +139,7 @@ SetMultipleHL(
 )
 
 SetMultipleHL(
-    ['PMenuSbar'], 
+    ['PMenuSbar'],
     'NONE',
     '#000000',
     'NONE',
@@ -172,3 +172,11 @@ SetMultipleHL(
     '234',
 )
 
+match RedundantSpaces /\s\+$/
+SetMultipleHL(
+    ['RedundantSpaces'],
+    'NONE',
+    '#ff0000',
+    'NONE',
+    '9',
+)
