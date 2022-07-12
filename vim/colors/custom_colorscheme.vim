@@ -172,7 +172,6 @@ SetMultipleHL(
     '234',
 )
 
-match RedundantSpaces /\s\+$/
 SetMultipleHL(
     ['RedundantSpaces'],
     'NONE',
@@ -180,3 +179,4 @@ SetMultipleHL(
     'NONE',
     '9',
 )
+match RedundantSpaces /\s\+$/
