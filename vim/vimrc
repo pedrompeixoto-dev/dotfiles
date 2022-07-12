@@ -38,51 +38,10 @@ set fileencoding=utf-8
 set backspace=indent,eol,start
 set mouse=a
 
-g:currentmode = {
-    'n': 'NORMAL ',
-    'v': 'VISUAL ',
-    'V': 'V·Line ',
-    "\<C-V>": 'V·Block ',
-    'i': 'INSERT ',
-    'R': 'R ',
-    'Rv': 'V·Replace ',
-    'c': 'Command ',
-    't': 'terminal ',
-}
-
-export def g:FileInfo(): string
-    var type = &filetype
-    var encoding = &fileencoding
-    var format = &fileformat
-    var result = ''
-
-    if (type != '')
-        result = result .. type
-    endif
-
-    if (format != '')
-        if (result != '')
-            result = result .. ' ' .. format
-        else 
-            result = format
-        endif 
-    endif
-
-    if (encoding != '')
-        if (result != '')
-            result = result .. ' ' .. encoding
-        else 
-            result = encoding
-        endif 
-    endif
-
-    return result 
-enddef
-
 set laststatus=2
 set statusline=
-set statusline+=\ %{currentmode[mode()]}
-set statusline+=%F%m\ [%{g:FileInfo()}]\ 
+set statusline+=\ %{statusline_utils#mode[mode()]}
+set statusline+=%F%m\ [%{statusline_utils#FileInfo()}]\ 
 set statusline+=%=
 set statusline+=L:%l/%L\ C:%c\ 
 
