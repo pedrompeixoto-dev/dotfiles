@@ -62,7 +62,7 @@ nnoremap <A-d> :vert res -5<CR>
 nnoremap <A-I> :res +5<CR>
 nnoremap <A-D> :res -5<CR>
 
-
 nnoremap <silent> <leader>s :split<CR>
 nnoremap <silent> <leader>v :vsplit<CR>
 
+nnoremap <silent> <leader>t :term<CR>
