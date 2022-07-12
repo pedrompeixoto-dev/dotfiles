@@ -18,12 +18,12 @@ enddef
 
 SetMultipleHL(
     [
-        'lCursor', 'MatchParen', 'PMenuSel', 'MatchParen', 'PMenuSel'
+        'Cursor', 'iCursor', 
     ], 
     '#000000',
-    '#dadada',
+    '#ffffff',
     '0', 
-    '252' 
+    '15' 
 )
 
 SetMultipleHL(
@@ -38,7 +38,17 @@ SetMultipleHL(
 
 SetMultipleHL(
     [
-        'Statement', 'Type', 'PreProc' 
+        'Title',
+    ], 
+    '#dadada',
+    '#121212',
+    '253',
+    '233'
+)
+
+SetMultipleHL(
+    [
+        'Statement', 'Type', 'PreProc', 'Directory' 
     ], 
     '#d7af00',
     'NONE',
@@ -60,10 +70,10 @@ SetMultipleHL(
     [
         'MatchParen' 
     ], 
-    '#000000',
     '#dadada',
+    '#000000',
+    '253',
     '0',
-    '253'
 )
 
 SetMultipleHL(
@@ -113,11 +123,11 @@ SetMultipleHL(
 )
 
 SetMultipleHL(
-    ['PMenuSel'], 
-    '#dadada',
-    '#3a3a3a',
-    '253',
-    '237'
+    ['PMenuSel', 'WildMenu', 'Search', 'Visual', 'QuickFixLine'], 
+    '#000000',
+    '#a8a8a8',
+    '0',
+    '248'
 )
 
 SetMultipleHL(
