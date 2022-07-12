@@ -47,6 +47,7 @@ g:currentmode = {
     'R': 'R ',
     'Rv': 'V·Replace ',
     'c': 'Command ',
+    't': 'terminal ',
 }
 
 export def g:FileInfo(): string
