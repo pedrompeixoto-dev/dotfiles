@@ -41,7 +41,7 @@ set mouse=a
 set laststatus=2
 set statusline=
 set statusline+=\ %{statusline_utils#mode[mode()]}
-set statusline+=%F%m\ [%{statusline_utils#FileInfo()}]\
+set statusline+=%F%m\ [%{statusline_utils#FileInfo()}]
 set statusline+=%=
 set statusline+=L:%l/%L\ C:%c\
 
