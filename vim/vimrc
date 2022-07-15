@@ -22,11 +22,14 @@ if has('gui_running')
     set guioptions-=m
     set guioptions-=r
     set guioptions-=L
+
     if has('gui_win32')
         set guifont=Liberation_Mono:h11:cANSI
     else
         set guifont=Liberation\ Mono\ 11
     endif
+
+    set guicursor+=a:blinkon0
 endif
 
 set relativenumber

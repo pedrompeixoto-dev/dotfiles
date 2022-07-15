@@ -70,10 +70,10 @@ SetMultipleHL(
     [
         'MatchParen'
     ],
-    '#dadada',
-    '#000000',
-    '253',
-    '0',
+    '#d7af00',
+    'NONE',
+    '178',
+    'NONE',
 )
 
 SetMultipleHL(
