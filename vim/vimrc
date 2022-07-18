@@ -33,7 +33,7 @@ if has('gui_running')
 endif
 
 set relativenumber
-set fillchars+=vert:\
+set fillchars=
 set belloff=all
 set colorcolumn=80
 set encoding=utf-8
@@ -71,3 +71,15 @@ nnoremap <silent> <leader>v :vsplit<CR>
 nnoremap <silent> <leader>t :term<CR>
 
 nnoremap <silent> <leader>b :call makeasync#Make()<CR>
+
+def g:ToggleQuickFix()
+    if empty(filter(getwininfo(), 'v:val.quickfix'))
+        cwindow
+    else
+        cclose
+    endif
+
+    exec ':wincmd p'
+enddef
+
+nnoremap <silent> <F2> :call ToggleQuickFix()<cr>
