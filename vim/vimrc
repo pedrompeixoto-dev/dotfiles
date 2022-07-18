@@ -68,7 +68,7 @@ nnoremap <A-D> :res -5<CR>
 nnoremap <silent> <leader>s :split<CR>
 nnoremap <silent> <leader>v :vsplit<CR>
 
-nnoremap <silent> <leader>t :term<CR>
+nnoremap <silent> <leader>t :bo term<CR>
 
 nnoremap <silent> <leader>b :call makeasync#Make()<CR>
 
