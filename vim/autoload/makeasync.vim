@@ -24,15 +24,18 @@ enddef
 
 var os = GetRunningOS()
 
-def MakeAsyncHandler(job: job, status: number) 
+def MakeAsyncHandler(job: job, status: number)
+    var currentWindowId = win_getid()
     execute 'vs ' .. compilationBuffer
     execute 'cgetb ' .. bufnr(compilationBuffer)
-    echom 'compilation completed and quickfix list populated' 
+    execute 'cw'
+    win_gotoid(currentWindowId)
+    echom 'compilation completed and quickfix list populated'
 enddef
 
 export def Make(): bool
 
-    if (bufexists(compilationBuffer)) 
+    if (bufexists(compilationBuffer))
         execute 'bd ' .. compilationBuffer
     endif
 
@@ -42,10 +45,10 @@ export def Make(): bool
         command = &makeprg
     endif
 
-    if (os == 'win') 
+    if (os == 'win')
         command = 'cmd /C ' .. &makeprg
     endif
-        
+
     echom 'running ' .. command
     makeJob = job_start(command, { 'exit_cb': 'MakeAsyncHandler', 'out_io': 'buffer', 'err_io': 'buffer', 'err_name': compilationBuffer, 'out_name': compilationBuffer })
     return true

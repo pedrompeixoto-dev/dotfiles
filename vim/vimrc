@@ -69,6 +69,7 @@ nnoremap <silent> <leader>s :split<CR>
 nnoremap <silent> <leader>v :vsplit<CR>
 
 nnoremap <silent> <leader>t :bo term<CR>
+map <leader>T :let $VIM_DIR=expand('%:p:h')<CR>:terminal<CR>cd $VIM_DIR<CR>
 
 nnoremap <silent> <leader>b :call makeasync#Make()<CR>
 
@@ -83,3 +84,4 @@ def g:ToggleQuickFix()
 enddef
 
 nnoremap <silent> <F2> :call ToggleQuickFix()<cr>
+
